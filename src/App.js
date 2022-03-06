@@ -4,10 +4,11 @@ import './App.css';
 import { useState } from "react";
 import Template from "./components/Template";
 import TodoList from "./components/TodoList";
-import TodoInsert from "./components/TodoInsert";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Problems from './components/Problems';
+import Video from "./components/Video";
 
 function App() {
-   // 토글함수
    
    const [todos, setTodos] = useState([
      {
@@ -35,14 +36,27 @@ const onCheckToggle =(id) => {
   );
 }
   return (
-    <>
-    <Main>
-      <Template>
-        <TodoList todos= {todos} setTodos = {setTodos} onCheckToggle = {onCheckToggle}/>
-        
-      </Template>
-    </Main>
+    <BrowserRouter>
+    <Switch>
+      {/* <Route path={"/home"} exact component={Home} /> */}
+      <Route path={"/"} exact>
+      <>
+        <Main>
+          <Template>
+            <TodoList todos= {todos} setTodos = {setTodos} onCheckToggle = {onCheckToggle}/>
+            
+          </Template>
+        </Main>
      </>
+      </Route>
+      <Route path={"/problems"} exact>
+        <Problems />
+      </Route>
+      <Route pate={"/videos"} exact>
+        <Video />
+      </Route>
+    </Switch>
+    </BrowserRouter>
     
   );
 }

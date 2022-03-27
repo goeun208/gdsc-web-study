@@ -7,6 +7,7 @@ import jscode from "./image/jscode.png"
 import inf from "./image/in.png"
 import back from "./image/back.png"
 import forward from "./image/forward.png"
+import Navbar from "./Navbar";
 
 let jsvideo = [[jscode, "https://youtu.be/PZIPsKgWJiw", 1],[jscode, "https://youtu.be/PZIPsKgWJiw", 2], [jscode, "https://youtu.be/PZIPsKgWJiw", 3]];
 let rvideo = [[nomad, "https://youtu.be/YNEdj1MNbok", 4],[rtodo, "https://youtu.be/51zgTcx3_9w", 5],[inf, "https://youtu.be/fgoMqmNKE18", 6]];
@@ -14,7 +15,7 @@ let rvideo = [[nomad, "https://youtu.be/YNEdj1MNbok", 4],[rtodo, "https://youtu.
 function Video() {
     return(
         <div className={styles.wrap}>
-            <div className={styles.head}>GDSC Frotend study</div>
+            <Navbar />
             <div className={styles.jsblock}>
                 <h2><MdCircle color="#6B6FAE" size={25}/> JavaScript</h2>
                 <div className={styles.imgbox}>

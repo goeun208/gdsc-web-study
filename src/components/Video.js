@@ -7,6 +7,7 @@ import jscode from "./image/jscode.png"
 import inf from "./image/in.png"
 import back from "./image/back.png"
 import forward from "./image/forward.png"
+import Navbar from "./Navbar";
 
 
 
@@ -18,7 +19,7 @@ let rvideo = [[nomad, "https://youtu.be/YNEdj1MNbok"],[rtodo, "https://youtu.be/
 function Video() {
     return(
         <div className={styles.wrap}>
-            <div className={styles.head}>GDSC Frotend study</div>
+            <Navbar />
             <div className={styles.jsblock}>
                 <h2><MdCircle color="#6B6FAE" size={25}/> JavaScript</h2>
 
